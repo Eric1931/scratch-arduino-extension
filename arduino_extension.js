@@ -223,6 +223,7 @@
   }
 
   function processInput(inputData) {
+    console.log(inputData);
     for (var i=0; i < inputData.length; i++) {
       if (parsingSysex) {
         if (inputData[i] == END_SYSEX) {
