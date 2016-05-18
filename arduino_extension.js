@@ -227,14 +227,11 @@
 
   function toFile(str){
     /// write to file 
-    var txtFile = "c:/temp/firmata.txt"; 
-    var file = new File(txtFile); 
-  
-    file.open("w"); // open file with write access 
-   // file.writeln("First line of text"); 
-    file.writeln(str); 
-    //file.write(str); 
-    file.close(); 
+   // var txtFile = "c:\\temp\\firmata.txt"; 
+  //  var file = new File(txtFile); 
+  //  file.open("w"); // open file with write access 
+  //  file.writeln(str);
+  //  file.close(); 
   }
 
   function processInput(inputData) {
