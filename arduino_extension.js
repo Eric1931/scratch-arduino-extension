@@ -227,15 +227,17 @@
 
   function toFile(str){
     /// write to file 
-    var txtFile = "c:\\temp\\firmata.txt"; 
-    var file = new File(txtFile); 
-    file.open("w"); // open file with write access 
-    file.writeln(str);
-    file.close(); 
+    //var txtFile = "c:\\temp\\firmata.txt"; 
+    //var file = new File(txtFile); 
+    //file.open("w"); // open file with write access 
+    //file.writeln(str);
+    //file.close(); 
   }
 
   function processInput(inputData) {
     //toFile(inputData);
+    console.log(inputData);
+    console.
     for (var i=0; i < inputData.length; i++) {
       if (parsingSysex) {
         if (inputData[i] == END_SYSEX) {
