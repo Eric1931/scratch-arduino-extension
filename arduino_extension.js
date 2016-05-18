@@ -83,10 +83,6 @@
 
   var hwList = new HWList();
 
-/// write to file 
-  var txtFile = "c:/temp/firmata.txt"; 
-  var file = new File(txtFile); 
-  //var str = "My string of text"; 
 
 
   function HWList() {
@@ -230,6 +226,10 @@
   }
 
   function toFile(str){
+    /// write to file 
+    var txtFile = "c:/temp/firmata.txt"; 
+    var file = new File(txtFile); 
+  
     file.open("w"); // open file with write access 
    // file.writeln("First line of text"); 
     file.writeln(str); 
