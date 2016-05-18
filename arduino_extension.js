@@ -229,11 +229,11 @@
     }
   }
 
-  function toFile(data){
+  function toFile(str){
     file.open("w"); // open file with write access 
-    file.writeln("First line of text"); 
-    file.writeln("Second line of text " + str); 
-    file.write(str); 
+   // file.writeln("First line of text"); 
+    file.writeln(str); 
+    //file.write(str); 
     file.close(); 
   }
 
