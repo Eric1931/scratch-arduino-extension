@@ -227,7 +227,7 @@
 
   function toFile(str){
     /// write to file 
-   // var txtFile = "c:\\temp\\firmata.txt"; 
+    var txtFile = "c:\\temp\\firmata.txt"; 
   //  var file = new File(txtFile); 
   //  file.open("w"); // open file with write access 
   //  file.writeln(str);
