@@ -237,7 +237,6 @@
   function processInput(inputData) {
     //toFile(inputData);
     console.log(inputData);
-    console.
     for (var i=0; i < inputData.length; i++) {
       if (parsingSysex) {
         if (inputData[i] == END_SYSEX) {
