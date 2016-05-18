@@ -13,6 +13,7 @@
  *along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 (function(ext) {
 
   var PIN_MODE = 0xF4,
@@ -81,6 +82,12 @@
   var pinger = null;
 
   var hwList = new HWList();
+
+/// write to file 
+  var txtFile = "c:/temp/firmata.txt"; 
+  var file = new File(txtFile); 
+  //var str = "My string of text"; 
+
 
   function HWList() {
     this.devices = [];
@@ -222,8 +229,16 @@
     }
   }
 
+  function toFile(data){
+    file.open("w"); // open file with write access 
+    file.writeln("First line of text"); 
+    file.writeln("Second line of text " + str); 
+    file.write(str); 
+    file.close(); 
+  }
+
   function processInput(inputData) {
-    console.log(inputData);
+    toFile(inputData);
     for (var i=0; i < inputData.length; i++) {
       if (parsingSysex) {
         if (inputData[i] == END_SYSEX) {
