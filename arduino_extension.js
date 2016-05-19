@@ -227,7 +227,7 @@
 
 
   function processInput(inputData) {
-    console.log(inputData);
+    
     for (var i=0; i < inputData.length; i++) {
       if (parsingSysex) {
         if (inputData[i] == END_SYSEX) {
@@ -260,8 +260,11 @@
         }
         switch(command) {
           case DIGITAL_MESSAGE:
+            console.log('Digital');
           case ANALOG_MESSAGE:
+            console.log('Analog');
           case REPORT_VERSION:
+            console.log('Report');
             waitForData = 2;
             executeMultiByteCommand = command;
             break;
